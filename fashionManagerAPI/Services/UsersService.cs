@@ -1,16 +1,19 @@
-﻿using fashionManager.Dto.Users.Request;
+﻿using AutoMapper;
+
+using fashionManager.Dto.Users.Request;
+using fashionManager.Dto.Users.Response;
 using fashionManager.Exceptions;
+using fashionManager.Extensions;
+using fashionManager.Interfaces.Repositories;
 using fashionManager.Interfaces.Services;
-using fashionManager.Models.Enums;
 using fashionManager.Models;
+using fashionManager.Models.Enums;
+
+using Microsoft.IdentityModel.Tokens;
+
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using fashionManager.Dto.Users.Response;
-using fashionManager.Extensions;
-using AutoMapper;
-using fashionManager.Interfaces.Repositories;
-using System.IdentityModel.Tokens.Jwt;
-using Microsoft.IdentityModel.Tokens;
 
 namespace fashionManager.Services
 {
@@ -48,9 +51,8 @@ namespace fashionManager.Services
             if (await _repository.CheckEmailAsync(user.Id, user.Email))
                 throw new ConflictException("Email já cadastrado");
 
-            //TODO:
-            //if (await _companyRepository.CheckUser(user.CompanyId, user.Email))
-            //    throw new ConflictException("Usuário já está vinculado a outra empresa");
+            if (await _companyRepository.CheckUser(user.CompanyId, user.Email))
+                throw new ConflictException("Usuário já está vinculado a outra empresa");
 
             user.Password = "12345678";
 

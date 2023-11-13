@@ -61,6 +61,19 @@ namespace fashionManager.Database
                         Password = "12345678"
                     }
                  );
+
+            modelBuilder
+                .Entity<Company>()
+                .HasData(
+                    new Company
+                    {
+                        Id = 1,
+                        Cnpj = "12123123000112",
+                        Email = "fashionmanager@email.com",
+                        Name = "Fashion Manager Ltda",
+                        Manager = "Beatriz Ceschini",
+                        Password = "12345678"
+                    });
         }
     }
 }

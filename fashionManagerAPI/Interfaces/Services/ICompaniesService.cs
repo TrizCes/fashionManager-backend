@@ -1,6 +1,13 @@
-﻿namespace fashionManager.Interfaces.Services
+﻿using fashionManager.Dto.Companies.Request;
+using fashionManager.Dto.Companies.Response;
+
+namespace fashionManager.Interfaces.Services
 {
-    public class ICompaniesService
+    public interface ICompaniesService
     {
+        Task<CompaniesResponse> CreateAsync(PostCompanies company);
+        Task<CompaniesResponse> UpdateAsync(int id, PutCompanies company);
+        Task<bool> DeleteAsync(int id);
+        Task<CompaniesResponse> GetByIdAsync(int id);
     }
 }
