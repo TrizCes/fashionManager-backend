@@ -1,6 +1,6 @@
 ﻿namespace fashionManager.Models
 {
-    public class Models
+    public class Model
     {
     }
 }
