@@ -1,6 +1,6 @@
 ﻿namespace fashionManager.Models
 {
-    public class Companies
+    public class Company
     {
     }
 }
