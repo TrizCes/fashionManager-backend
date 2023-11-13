@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using fashionManager.Dto.Users.Request;
+using fashionManager.Models;
 
 namespace fashionManagerAPI.Mapper.Users
 {
@@ -7,7 +8,7 @@ namespace fashionManagerAPI.Mapper.Users
     {
         public PostUsersProfile()
         {
-            CreateMap<PostUsers, Users>().ReverseMap();
+            CreateMap<PostUsers, User>().ReverseMap();
         }
     }
 }
