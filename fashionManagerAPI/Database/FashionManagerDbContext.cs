@@ -38,7 +38,7 @@ namespace fashionManager.Database
                 .HasData(
                     new User
                     {
-                        Id = 4,
+                        Id = 1,
                         Name = "Admin",
                         Email = "admin@email.com",
                         Role = RoleEnum.Admin,
@@ -54,7 +54,7 @@ namespace fashionManager.Database
                     },
                     new User
                     {
-                        Id = 1,
+                        Id = 3,
                         Name = "Gerente",
                         Email = "gerente@email.com",
                         Role = RoleEnum.Manager,
