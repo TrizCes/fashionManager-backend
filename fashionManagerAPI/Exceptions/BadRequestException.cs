@@ -1,6 +1,8 @@
 ﻿namespace fashionManager.Exceptions
 {
-    public class BadRequestException
+    public class BadRequestException : Exception
     {
+        public BadRequestException(string mensagem)
+            : base(mensagem) { }
     }
 }

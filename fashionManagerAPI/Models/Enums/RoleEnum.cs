@@ -1,6 +1,19 @@
-﻿namespace fashionManager.Models.Enums
+﻿using System.ComponentModel;
+
+namespace fashionManager.Models.Enums
 {
-    public class RoleEnum
+    public enum RoleEnum
     {
+        [Description("Gerente")]
+        Manager = 1,
+
+        [Description("Somente ver")]
+        ReadOnly = 2,
+
+        [Description("Time")]
+        Team = 3,
+
+        [Description("Admin")]
+        Admin = 4
     }
 }
