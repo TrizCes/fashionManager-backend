@@ -4,7 +4,7 @@ Esse projeto faz parte do programa de formações de desenvolvedores Full Stack 
 
 <br>
 
-# LAB Clothing Collection (BackEnd)
+# Fashion Manager (BackEnd)
 
 É um software audacioso para gestão de coleções de moda no setor de vestuário. Nesse repositório está a aplicação Back-End do software, sendo uma API Rest construída utilizando C# e .NET, com métodos GET, POST, PUT, PATCH e DELETE bem definidos.
 Nesta aplicação para gerenciamento de coleções de moda e dos modelos, sendo possivel adicionar, editar e excluir coleções, modelos e usuarios.
